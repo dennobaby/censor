@@ -1,6 +1,6 @@
 <?php
 
-namespace dennobaby\Censoring\Exception;
+namespace Censor\Exception;
 
 use Throwable;
 

@@ -1,7 +1,18 @@
 {
     "name": "dennobaby/censor",
     "description": "Simple PHP-lib to censor sensible data",
+    "version": "0.1.0",
     "require": {
         "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Censor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Censor\\Tests\\": "tests/"
+        }
     }
 }

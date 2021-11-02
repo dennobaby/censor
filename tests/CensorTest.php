@@ -1,11 +1,13 @@
 <?php /** @noinspection PhpUnhandledExceptionInspection */
 
-namespace dennobaby\Censoring\Tests;
+namespace Censor\Tests;
 
-use dennobaby\Censoring\Censor;
-use dennobaby\Censoring\Exception\BoundaryException;
-use Exception;
+use Censor\Censor;
+use Censor\Exception\BoundaryException;
 use PHPUnit\Framework\TestCase;
+
+require __DIR__ . "/../src/Censor.php";
+require __DIR__ . "/../src/Exception/BoundaryException.php";
 
 final class CensorTest extends TestCase
 {
