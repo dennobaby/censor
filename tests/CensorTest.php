@@ -3,6 +3,7 @@
 namespace dennobaby\Censoring\Tests;
 
 use dennobaby\Censoring\Censor;
+use dennobaby\Censoring\Exception\BoundaryException;
 use Exception;
 use PHPUnit\Framework\TestCase;
 
@@ -119,13 +120,13 @@ final class CensorTest extends TestCase
 
     public function testException_1()
     {
-        $this->expectException(Exception::class);
+        $this->expectException(BoundaryException::class);
         Censor::censor('AbCdEfGhIjK', 0, 44);
     }
 
     public function testException_2()
     {
-        $this->expectException(Exception::class);
+        $this->expectException(BoundaryException::class);
         Censor::censor('AbCdEfGhIjK', -4, 4);
     }
 }
