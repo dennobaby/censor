@@ -1,0 +1,7 @@
+{
+    "name": "dennobaby/censor",
+    "description": "Simple PHP-lib to censor sensible data",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
