@@ -1,6 +1,6 @@
 <?php
 
-namespace Censor\Exception;
+namespace Denno\Censor\Exception;
 
 use Throwable;
 

@@ -1,9 +1,9 @@
 <?php /** @noinspection PhpUnhandledExceptionInspection */
 
-namespace Censor\Tests;
+namespace Denno\CensorTests;
 
-use Censor\Censor;
-use Censor\Exception\BoundaryException;
+use Denno\Censor\Censor;
+use Denno\Censor\Exception\BoundaryException;
 use PHPUnit\Framework\TestCase;
 
 require __DIR__ . "/../src/Censor.php";
@@ -44,14 +44,14 @@ final class CensorTest extends TestCase
 
     public function testIBAN_1()
     {
-        $censored = Censor::censorOnStrategy('DE54 2545 0110 0031 0465 50', Censor::STRATEGY_IBAN);
-        $this->assertEquals('DE**25450110003104****', $censored);
+        $censored = Censor::censorOnStrategy('DE89 3704 0044 0532 0130 00', Censor::STRATEGY_IBAN);
+        $this->assertEquals('DE**37040044053201****', $censored);
     }
 
     public function testIBAN_2()
     {
-        $censored = Censor::censorOnStrategy('DE54254501100031046550', Censor::STRATEGY_IBAN);
-        $this->assertEquals('DE**25450110003104****', $censored);
+        $censored = Censor::censorOnStrategy('DE89370400440532013000', Censor::STRATEGY_IBAN);
+        $this->assertEquals('DE**37040044053201****', $censored);
     }
 
     public function testIBAN_3()
@@ -74,8 +74,8 @@ final class CensorTest extends TestCase
 
     public function testMail_2()
     {
-        $censored = Censor::censorOnStrategy('dennis.ditte@united-promotion.eu', Censor::STRATEGY_MAIL);
-        $this->assertEquals('dennis.di***@united-promot***.eu', $censored);
+        $censored = Censor::censorOnStrategy('dennis.ditte@very-long-domain.local', Censor::STRATEGY_MAIL);
+        $this->assertEquals('dennis.di***@very-long-dom***.local', $censored);
     }
 
     public function testMail_3()

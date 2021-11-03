@@ -1,9 +1,8 @@
 <?php
 
-namespace Censor;
+namespace Denno\Censor;
 
-
-use Censor\Exception\BoundaryException;
+use Denno\Censor\Exception\BoundaryException;
 use Exception;
 
 class Censor
