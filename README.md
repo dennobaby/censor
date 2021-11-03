@@ -1,3 +1,5 @@
+[![Tests](https://github.com/dennobaby/censor/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/dennobaby/censor/actions/workflows/tests.yml)
+
 # censor
 Simple PHP-lib to censor sensible data
 
@@ -13,9 +15,9 @@ $censored = Censor::censorOnStrategy($string, $strategy);
 
 ## Strategies
 Censor comes up with defined strategies for common data-types like IBAN, Phonenumbers, 
- ### IBAN
+### IBAN
  This strategy is useful to censor bank-accounts in IBAN-Format. 
- ####Examples
+####Examples
 * DE89 3704 0044 0532 0130 00 => DE&ast;&ast;37040044053201&ast;&ast;&ast;&ast;
 * NL91 ABNA 0417 1643 00 =>  NL&ast;&ast;ABNA041716&ast;&ast;&ast;&ast;
 
