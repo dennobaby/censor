@@ -4,7 +4,7 @@ namespace Denno\Censor\Strategy;
 
 class PhoneShort implements StrategyInterface
 {
-    private string $string;
+    private $string;
 
     public function __construct($string)
     {

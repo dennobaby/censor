@@ -4,10 +4,10 @@ namespace Denno\Censor\Strategy;
 
 class PersonName implements StrategyInterface
 {
-    private string $re = '/[^\S\r\n]|&|-|\+|$/m';
+    private $re = '/[^\S\r\n]|&|-|\+|$/m';
 
-    private string $string;
-    private array $positions = [];
+    private $string;
+    private $positions = [];
 
     public function __construct($string)
     {
