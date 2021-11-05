@@ -5,7 +5,6 @@ namespace Denno\Censor;
 use Denno\Censor\Exception\BoundaryException;
 use Denno\Censor\Exception\UnknownStrategyException;
 use Denno\Censor\Strategy\StrategyInterface;
-use Exception;
 
 class Censor
 {
@@ -13,7 +12,8 @@ class Censor
     /**
      * @param $string
      * @param $strategy
-     * @return mixed
+     * @return string
+     * @throws BoundaryException
      * @throws UnknownStrategyException
      */
     final static function censorOnStrategy($string, $strategy): string
@@ -28,7 +28,10 @@ class Censor
     }
 
     /**
-     * @throws Exception
+     * @param $string
+     * @param ...$positions
+     * @return mixed
+     * @throws BoundaryException
      */
     final static function censor($string, ...$positions)
     {
